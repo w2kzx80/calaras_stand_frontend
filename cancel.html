@@ -179,7 +179,7 @@
 	</div>
     <script>
 		const GAS_URL = "https://script.google.com/macros/s/AKfycbywiCkvoPNvPrE6jip3Vr98pTCTAMbvWf1rt6SLkHW8j4Gk8eq3DVhPEWfJPgA4pMqF/exec";
-		const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(window.location.search);
 		var chatId = params.get("chatId") || "";
 		if (chatId) {
 			console.log(`chatId взят из URL: ${chatId}`);

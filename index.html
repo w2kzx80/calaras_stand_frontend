@@ -275,7 +275,7 @@ fetch(`${GAS_URL}?page=formparameters&chatId=${encodeURIComponent(chatId)}`)
 	.then(r => r.json())
 	.then(data => initApp(data))
 	.catch(err => {
-		alert("Ошибка загрузки данных");
+		alert(`formparameters&chatId=${encodeURIComponent(chatId)} Ошибка загрузки данных = ${err}`);
 		console.error(err);
 	});
 

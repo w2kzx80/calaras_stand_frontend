@@ -273,7 +273,10 @@ $("#form_loading").removeClass("d-none").addClass("d-flex");
 // --- Загружаем данные ---
 fetch(`${GAS_URL}?page=formparameters&chatId=${encodeURIComponent(chatId)}`)
 	.then(r => r.json())
-	.then(data => initApp(data))
+	.then(data => {
+        alert(JSON.stringify(data));
+        initApp(data);
+    })
 	.catch(err => {
 		alert(`formparameters&chatId=${encodeURIComponent(chatId)} Ошибка загрузки данных = ${err}`);
 		console.error(err);
